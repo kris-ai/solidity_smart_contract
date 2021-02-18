@@ -86,8 +86,21 @@ You will need to fill in the constructor parameters with your designated `employ
 
 Test the `deposit` function by sending various values. Keep an eye on the `employee` balances as you send different amounts of Ether to the contract and ensure the logic is executing properly.
 
-![Remix Testing](Images/remix-test.png)
+### Network Test
+![Network Testing](Images/network-test.png)
 
+### Accounts Before Transaction
+
+![Accounts Before TX](Images/accounts-before.png)
+
+### MetaMask Transaction
+
+![Transaction](Images/transaction.png)
+
+### Accounts After Transaction
+
+![Paid Accounts](Images/accounts-after.png)
+---
 ### Level Two: The `TieredProfitSplitter` Contract
 
 In this contract, rather than splitting the profits between Associate-level employees, you will calculate rudimentary percentages for different tiers of employees (CEO, CTO, and Bob).

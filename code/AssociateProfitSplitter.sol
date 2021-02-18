@@ -1,7 +1,5 @@
 pragma solidity ^0.5.0;
 
-    import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol";
-    
 // lvl 1: equal split
 contract AssociateProfitSplitter {
     // Create three payable addresses representing `employee_one`, `employee_two` and `employee_three`.
@@ -22,7 +20,7 @@ contract AssociateProfitSplitter {
     function deposit() public payable {
         
         // Split `msg.value` into three
-        uint amount = msg.value.div(3);
+        uint amount = msg.value / 3;
 
         // Transfer the amount to each employee
         employee_one.transfer(amount);
@@ -30,7 +28,7 @@ contract AssociateProfitSplitter {
         employee_three.transfer(amount);
 
         // Take care of a potential remainder by sending back to HR (`msg.sender`)
-        msg.sender.transfer(msg.value.sub(amount.mul(3)));
+        msg.sender.transfer(msg.value - amount * 3);
     }
 
     function() external payable {
